@@ -1,0 +1,58 @@
+
+
+
+
+/************ SIDENAV ************/
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #012622; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a:not(.nav-logo-link) {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Kanit";
+    color: white;
+    display: block;
+  }  
+  .sidenav a:hover:not(.nav-logo-link) {
+    color: #f1f1f1;
+    background-color: black;
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.nav-logo {
+    width: 120px;
+    transition: all .2s ease-in-out;
+    margin-bottom: 40px;
+
+}
+.nav-logo-link img {
+    border-radius: 10%;
+}
+.nav-logo:hover {
+    transform: scale(1.1); 
+}
+.nav-logo-link{
+    margin:10px;
+    margin-bottom: 40px;
+}
+
+.sidenav hr {
+    margin-top:-50px;
+    margin-bottom:30px;
+}
+/************ SIDENAV END ************/
