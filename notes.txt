@@ -1,2 +1,4 @@
-SOCIONICS
-- Needs information about IMEs, blocks, Model A, 
+NAMES
+-Typology Nexus
+-Psychonomicon
+-Typonomicon
