@@ -2,3 +2,17 @@ NAMES
 -Typology Nexus
 -Psychonomicon
 -Typonomicon
+SUBPAGES
+-Gallery based navigation, filterable by macro-subject.
+SOCIONICS
+-44 cards
+JUNG
+-intro
+-dichotomies- intro/extraversion, rational/irrational, consciousness/unconsciousness, explicit/implicit
+-functions- feeling, thinking, intuition, sensation
+-types- ET, EF, ES, EN, IT, IF, IS, IN
+ENNEAGRAM
+-Protoanalysis and Clinical Enneagram 
+-nine types- E1, E2, E3, E4, E5, E6, E7, E8, E9
+-triads- familial, hornevian, passional, freudian, loves
+-instincts and subtypes - SO, SX, SP + 27 subtypes 
