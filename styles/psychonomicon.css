@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Montserrat&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
 body {
     background-color: #0b0c0f;
 }
@@ -7,6 +10,8 @@ body {
 header {
     display:grid;
     grid-template-columns: 1fr 2fr;
+    position: sticky;
+    top: 0;
 }
 .home-title {
     align-self:center;
@@ -14,7 +19,7 @@ header {
     text-align: center;
     font-family: 'Montserrat';
     text-decoration: none;
-    color: white;
+    color: #dbd0d0;
 }
 .subpage-home-title {
     margin-left:162px;
@@ -28,7 +33,7 @@ nav {
 }
 nav a {
     text-decoration: none;
-    color: white;
+    color: #dbd0d0;
     padding: 10px 30px 10px 30px;
     margin:auto 10px auto 10px;
     border-radius: 25px;
@@ -37,7 +42,7 @@ nav a {
     font-size: 1.2em;
     transition: background .2s ease-in-out;
 }
-nav a:hover, .home-nav:hover{
+nav a:hover{
     background-color: #23100e;
 }
 .selected-nav {
@@ -47,15 +52,66 @@ nav a:hover, .home-nav:hover{
     border-style: solid;
     border-width: 1px;
 }
+.path-bar{
+    margin:8px 48px auto 190px;
+    padding:5px 10px 5px 10px;
+    z-index: 10;
+    background-color: #121318;
+    border-color:#26282e;
+    border-radius: 13px;
+    border-style:solid;
+    border-width:1px;
+    width: auto;
+    grid-column:1/3;
+    overflow:hidden;
+
+}
+.paths {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.path-bar a{
+    text-decoration: none;
+    padding:1px 16px 1px 16px;
+    transition: background .2s ease-in-out;
+    border-radius: 25px;
+}
+.path-bar a:not(.selected-nav) {
+    color:#dbd0d0;
+}
+.path-bar a:hover {
+    background-color: #23100e;
+}
+.path-separator {
+    margin: auto 10px auto 10px;
+    color:#dbd0d0;
+}
+#progress-bar {
+    --scrollAmount: 0%;
+    
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    width: var(--scrollAmount);
+  
+    /*  background: linear-gradient(to right, #F24E1E var(--scrollAmount), transparent 0);
+    width: 100%; */
+    
+    height:5px;
+    z-index:20;
+    margin: 5px -10px -5px -10px;
+  }
 /**************** HEADER END ****************/
 
-h1, h2, h3 {
+h1, h2 {
     font-family: 'Montserrat';
-    color:white;
+    color:#dbd0d0;
 }
-li, ul, p {
+.path-bar p {
+    font-family: 'Montserrat';
+}
+li, ul, p:not(.path-bar p) {
     font-family: 'Open Sans';
-    color:white;
+    color:#dbd0d0;
 }
 ul a {
     color:blue;
@@ -68,17 +124,16 @@ hr {
     width:100%;
     height:0px;
 }
-
 .content {
     background-color: #121318;
+    border-color:#26282e;
     margin-top: 30px;
-    margin-left: 162px; /* was 200px */
+    margin-left: 182px; /* was 200px */
     margin-right: 40px;
     padding:30px;
     border-radius: 25px;
     border-style:solid;
     border-width:1px;
-    border-color:#26282e;
 }
 #socio-content{
     display:grid;
@@ -99,7 +154,7 @@ hr {
 }
 
 .white {
-    color:white;
+    color:#dbd0d0;
 }
 td {
     border: 1px solid white;
@@ -114,7 +169,7 @@ td br {
 /************ SIDENAV ************/
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 170px; /* Set the width of the sidebar */
+    width: 190px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -125,7 +180,7 @@ td br {
   }
   
   /* The navigation menu links */
-  .sidenav a:not(.nav-logo-link) {
+  .sidenav a:not(.nav-logo-link, .home-title) {
     padding: 6px 0px 6px 16px; /* right pad was 8px */
     text-decoration: none;
     font-size: 1.1em;
@@ -133,6 +188,7 @@ td br {
     color: white;
     display: block;
     transition: background .2s ease-in-out;
+    border-radius: 25px;
   }  
   .sidenav a:hover:not(.nav-logo-link) {
     color: #f1f1f1;
@@ -161,10 +217,30 @@ td br {
     margin:10px;
     margin-bottom: 40px;
 }
-
-.sidenav hr {
-    margin-top:70px;
-    margin-bottom:30px;
-    border-color: rgba(255, 255, 255, 0)
-}
 /************ SIDENAV END ************/
+
+/************ FOOTER ************/
+footer {
+    background-color: rgba(20,30,13, .7);
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a {
+    color:rgb(31, 161, 101);
+    text-decoration: none;
+}
+footer p a:hover {
+    background-color: black;
+    text-decoration: underline;
+}
+footer .social img{
+    padding-top: 15px;
+    width:75px;
+}
+footer a:hover{
+    transition: .2s ease-in-out;
+}
+/************ FOOTER END ************/
